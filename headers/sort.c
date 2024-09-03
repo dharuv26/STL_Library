@@ -16,8 +16,15 @@ void swap(int *arr, int i, int j)
 	arr[j] = temp;
 }
 
-//--------------------Inserion Sort-----------------------------
+//--------------------Sort--------------------------------------
 
+void sort(int *arr, int n, int(*cmp)(int, int))
+{
+	if(cmp == NULL) cmp = defaultCmp;
+	merge_sort(arr, n, cmp);
+}
+
+//--------------------Inserion Sort-----------------------------
 
 void insertion_sort(int *arr, int n, int(*cmp)(int, int))
 {
