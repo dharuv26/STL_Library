@@ -78,7 +78,7 @@ bool sisEmpty(stack* stack) {
 
 //-----------------Delete stack---------------------------------
 
-void sdeleteStack(stack* stack) {
+void deleteStack(stack* stack) {
 	while (!sisEmpty(stack)) {
 		spop(stack);
 	}

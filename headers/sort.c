@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include "sort.h"
 
 int defaultCmp(int a, int b)
 {
@@ -81,7 +82,7 @@ void bubble_sort(int *arr, int n, int(*cmp)(int, int))
 
 //--------------------Merge Sort--------------------------------
 
-void merge(int arr[], int aux[], int left, int mid, int right, int(*cmp)(int, int))
+void merge(int *arr, int *aux, int left, int mid, int right, int(*cmp)(int, int))
 {
 	for (int k = left; k <= right; k++) aux[k] = arr[k];
 
@@ -97,7 +98,7 @@ void merge(int arr[], int aux[], int left, int mid, int right, int(*cmp)(int, in
 	}
 }
 
-void merge_sort_recursive(int arr[], int aux[], int left, int right, int(*cmp)(int, int))
+void merge_sort_recursive(int *arr, int *aux, int left, int right, int(*cmp)(int, int))
 {
 	if (left >= right) return;
 
@@ -120,7 +121,7 @@ void merge_sort(int *arr, int n, int(*cmp)(int, int))
 
 //--------------------Quick Sort--------------------------------
 
-void quick_sort_recursive(int arr[], int left, int right, int(*cmp)(int, int))
+void quick_sort_recursive(int *arr, int left, int right, int(*cmp)(int, int))
 {
 	if (left >= right) return;
 
@@ -134,7 +135,7 @@ void quick_sort_recursive(int arr[], int left, int right, int(*cmp)(int, int))
 	quick_sort_recursive(arr, i + 1, right, cmp);
 }
 
-void quick_sort(int arr[], int n, int(*cmp)(int, int))
+void quick_sort(int *arr, int n, int(*cmp)(int, int))
 {
 	if(cmp == NULL) cmp = defaultCmp;
 	quick_sort_recursive(arr, 0, n, cmp);
