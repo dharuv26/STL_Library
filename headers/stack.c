@@ -17,10 +17,10 @@ struct stack {
 //-----------------Stack Initialization-------------------------
 
 stack* createStack() {
-	stack* stack = (stack*)malloc(sizeof(stack));
-	stack->top = NULL;
-	stack->size = 0;
-	return stack;
+	stack* newStack = (stack*)malloc(sizeof(stack));
+	newStack->top = NULL;
+	newStack->size = 0;
+	return newStack;
 }
 
 //-----------------Stack Node Initialization--------------------
