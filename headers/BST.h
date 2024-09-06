@@ -12,8 +12,6 @@ BST* tsearch(BST* root, int key);
 BST* tdeleteNode(BST* root, int key);
 BST* tfindMin(BST* root);
 void tinorderTraversal(BST* root);
-void tpreorderTraversal(BST* root);
-void tpostorderTraversal(BST* root);
 void deleteBST(BST* root);
 
 #endif
