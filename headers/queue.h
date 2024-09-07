@@ -9,7 +9,7 @@ typedef struct qNode qNode;
 typedef struct queue queue;
 
 queue* createQueue();
-qNode* createNode(int data);
+qNode* createQNode(int data);
 void qpush(queue* queue, int data);
 void qpop(queue* queue);
 int qfront(queue* queue);

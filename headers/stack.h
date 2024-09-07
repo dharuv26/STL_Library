@@ -9,7 +9,7 @@ typedef struct sNode sNode;
 typedef struct stack stack;
 
 stack* createStack();
-sNode* createNode(int data);
+sNode* createSNode(int data);
 void spush(stack* stack, int data);
 void spop(stack* stack);
 int stop(stack* stack);
