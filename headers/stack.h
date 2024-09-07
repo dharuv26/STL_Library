@@ -1,5 +1,5 @@
-#ifndef stack_h
-#define stack_h
+#ifndef STACK_h
+#define STACK_h
 
 #include <stdbool.h>
 #include <stdio.h>
@@ -9,7 +9,7 @@ typedef struct sNode sNode;
 typedef struct stack stack;
 
 stack* createStack();
-sNode* createNode(int data);
+sNode* createSNode(int data);
 void spush(stack* stack, int data);
 void spop(stack* stack);
 int stop(stack* stack);

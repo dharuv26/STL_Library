@@ -25,7 +25,7 @@ stack* createStack() {
 
 //-----------------Stack Node Initialization--------------------
 
-sNode* createNode(int data) {
+sNode* createSNode(int data) {
 	sNode* newNode = (sNode*)malloc(sizeof(sNode));
 	newNode->data = data;
 	newNode->next = NULL;
@@ -35,7 +35,7 @@ sNode* createNode(int data) {
 //-----------------Push element to stack------------------------
 
 void spush(stack* stack, int data) {
-	sNode* newNode = createNode(data);
+	sNode* newNode = createSNode(data);
 	newNode->next = stack->top;
 	stack->top = newNode;
 	stack->size++;

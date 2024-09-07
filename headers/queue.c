@@ -27,7 +27,7 @@ queue* createQueue() {
 
 //-----------------Queue Node Initialization--------------------
 
-qNode* createNode(int data) {
+qNode* createQNode(int data) {
     qNode* newNode = (qNode*)malloc(sizeof(qNode));
     newNode->data = data;
     newNode->next = NULL;
@@ -37,7 +37,7 @@ qNode* createNode(int data) {
 //-----------------Push element to queue------------------------
 
 void qpush(queue* queue, int data) {
-    qNode* newNode = createNode(data);
+    qNode* newNode = createQNode(data);
     if (queue->rear == NULL) {
         queue->front = queue->rear = newNode;
     } else {

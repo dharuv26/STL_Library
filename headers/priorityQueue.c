@@ -101,7 +101,7 @@ int pqtop(priority_queue* pq) {
 // ----------------Get size of PQ-------------------------------
 
 int pqgetSize(priority_queue* pq) {
-	return pq->size - 1;
+	return pq->size;
 }
 
 // ----------------Check if PQ is empty-------------------------
