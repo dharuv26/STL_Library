@@ -45,7 +45,7 @@ By focusing on modularity and performance, the library enables developers to imp
 
 - ***Modular and Easy to Integrate:*** The library is modular, with each data structure and algorithm implemented in a separate file. This makes it simple to include only the components you need for your project while maintaining clean and organized code.
 
-- ***Performance Measurement: The `stats.h` header provides functionality for measuring the execution time and memory usage of your programs. By including this header, you can easily track the performance of your code and make optimizations as needed.
+- ***Performance Measurement:*** The `stats.h` header provides functionality for measuring the execution time and memory usage of your programs. By including this header, you can easily track the performance of your code and make optimizations as needed.
 <br/>
 
 ## Getting Started
