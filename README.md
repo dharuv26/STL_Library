@@ -27,7 +27,7 @@ This library provides a collection of common data structures and algorithms impl
 
 ## Introduction
 
-This C library offers a collection of foundational data structures and algorithms commonly used in software development. It is designed to be flexible and efficient, allowing you to work with generic data types. The library includes essential data structures like stacks, queues, priority queues (heaps), linked lists, and unordered maps (hash maps). Additionally, it provides a wide range of algorithms, including various sorting techniques and search methods.
+This C library offers a collection of foundational data structures and algorithms commonly used in software development. It is designed to be flexible and efficient, allowing you to work with generic data types. The library includes essential data structures like stacks, queues, priority queues (heaps), linked lists, binary search trees and unordered maps (hash maps). Additionally, it provides a wide range of algorithms, including various sorting techniques and search methods.
 
 By focusing on modularity and performance, the library enables developers to implement efficient solutions to complex problems. Whether you're handling dynamic collections of data, searching through data sets, or performing complex sorting operations, this library provides well-tested and optimized implementations to help streamline development. The library is well-suited for students, hobbyists, and professionals working on systems-level programming or other C-based applications.
 <br/>
@@ -44,13 +44,15 @@ By focusing on modularity and performance, the library enables developers to imp
 - ***Function Pointers for Customization:*** Sorting algorithms and priority queues allow users to pass custom comparison functions, making it easy to switch between different criteria (e.g., ascending vs. descending order) without changing the underlying logic.
 
 - ***Modular and Easy to Integrate:*** The library is modular, with each data structure and algorithm implemented in a separate file. This makes it simple to include only the components you need for your project while maintaining clean and organized code.
+
+- ***Performance Measurement: The `stats.h` header provides functionality for measuring the execution time and memory usage of your programs. By including this header, you can easily track the performance of your code and make optimizations as needed.
 <br/>
 
 ## Getting Started
 
   ### Prerequisites
 
-  Before using this library, you'll need to have a C development environment set up on your       system.
+  Before using this library, you'll need to have a C development environment set up on your system.
 
   ### Installation
 
@@ -62,13 +64,13 @@ By focusing on modularity and performance, the library enables developers to imp
      ```
   2. **Use in Your Project:<br/>**
      
-     Link the library to your project by including the header files and linking to the static ``lib_stl.a`` library file. Make sure to include the relevant headers for the data structures and algorithms or include ``stl.h`` for your use.
+     Link the library to your project by including the header files and linking to the static `lib_stl.a` library file. Make sure to include the relevant headers for the data structures and algorithms or include `stl.h` for your use.
 
 3. **Compile Code**
     
    Compile the code using the following command:
    ```
-    gcc your_program.c -L. -lib_stl.a -o your_program
+   gcc your_program.c -L. lib_stl.a -o your_program
    ```
 <br/>
 
@@ -90,6 +92,10 @@ By focusing on modularity and performance, the library enables developers to imp
 3. Clean up:
 
    - When done, make sure to free the dynamically allocated memory, e.g., mpdeleteStack(s);, deleteQueue(q);, deletePriorityQueue(pq);, etc.
+  
+4. Using stats
+
+   - To measure the performance of your program, include `stats.h` and use its functions to track execution time and memory usage
 
 <br/>
 
